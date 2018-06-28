@@ -88,7 +88,7 @@ func (m *IniConf) ReadInt(k string) (int, error) {
 
 func (m *IniConf) ReadInt64(k string) (int64, error) {
 	if v, ok := m.mm[k]; ok {
-		return strconv.ParseInt(v, 64, 10)
+		return strconv.ParseInt(v, 10, 64)
 	} else {
 		return 0, EIniConfNoKey
 	}
